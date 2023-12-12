@@ -27,9 +27,7 @@ class KeyBoard extends StatelessWidget {
     return Container(
       decoration: BoxDecoration(
         borderRadius: const BorderRadius.only(
-          topLeft: Radius.circular(40),
-          topRight: Radius.circular(40),
-        ),
+            topLeft: Radius.circular(40), topRight: Radius.circular(40)),
         color: CommonColors.white,
       ),
       height: screenHeight / 2.2,

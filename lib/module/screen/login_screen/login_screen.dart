@@ -1,10 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:get/route_manager.dart';
 import 'package:money_transfer_ui/core/constant/colors.dart';
 import 'package:money_transfer_ui/core/constant/icons.dart';
 import 'package:money_transfer_ui/core/constant/images.dart';
 import 'package:money_transfer_ui/core/constant/string.dart';
-import 'package:money_transfer_ui/module/screen/home_screen/home_screen.dart';
 import 'package:money_transfer_ui/module/widget/common_keybord.dart';
 import 'package:money_transfer_ui/module/widget/common_text.dart';
 
@@ -32,7 +30,7 @@ class _LoginScreenState extends State<LoginScreen> {
               fontSize: 30,
               fontWight: FontWeight.bold,
               color: CommonColors.grey,
-              topPadding: 10,
+              topPadding: 20,
               bottomPadding: 5,
             ),
             CommonText(
@@ -42,17 +40,18 @@ class _LoginScreenState extends State<LoginScreen> {
               color: CommonColors.liteGrey,
             ),
             Padding(
-              padding: const EdgeInsets.only(top: 30, bottom: 30),
+              padding: const EdgeInsets.only(top: 35, bottom: 30),
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   Icon(CommonIcon.outLineCircle.icon,
-                      color: CommonColors.green),
+                      color: CommonColors.liteGreen),
                   Icon(CommonIcon.outLineCircle.icon,
-                      color: CommonColors.green),
+                      color: CommonColors.liteGreen),
                   Icon(CommonIcon.outLineCircle.icon,
-                      color: CommonColors.green),
-                  Icon(CommonIcon.outLineCircle.icon, color: CommonColors.green)
+                      color: CommonColors.liteGreen),
+                  Icon(CommonIcon.outLineCircle.icon,
+                      color: CommonColors.liteGreen)
                 ],
               ),
             ),
