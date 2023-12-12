@@ -1,14 +1,74 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+import 'package:get/get_navigation/get_navigation.dart';
+import 'package:money_transfer_ui/module/widget/common_text.dart';
+import '../../core/constant/colors.dart';
 
-class CommonButton extends StatelessWidget {
-  const CommonButton({
+class CommonElevatedButton extends StatelessWidget {
+  const CommonElevatedButton({
     super.key,
-    required this.buttonType,
+    required this.buttonName,
+    this.leftPadding,
+    this.rightPadding,
   });
-  final String buttonType;
+  final String buttonName;
+  final double? leftPadding;
+  final double? rightPadding;
 
   @override
   Widget build(BuildContext context) {
-    return TextButton(onPressed: () {}, child: Text(buttonType));
+    return ElevatedButton(
+      style: ButtonStyle(
+        backgroundColor: MaterialStatePropertyAll(CommonColors.blue),
+        shape: MaterialStateProperty.all(
+          RoundedRectangleBorder(
+            borderRadius: BorderRadius.circular(30),
+          ),
+        ),
+      ),
+      onPressed: () => Get.back(),
+      child: CommonText(
+        title: buttonName,
+        fontSize: 15,
+        fontWight: FontWeight.bold,
+        topPadding: 13,
+        bottomPadding: 13,
+        leftPadding: leftPadding ?? 0,
+        rightPadding: rightPadding ?? 0,
+      ),
+    );
+  }
+}
+
+class CommonOutlinedButton extends StatelessWidget {
+  const CommonOutlinedButton({
+    super.key,
+    required this.buttonName,
+  });
+  final String buttonName;
+
+  @override
+  Widget build(BuildContext context) {
+    return OutlinedButton(
+      style: ButtonStyle(
+        shape: MaterialStateProperty.all(
+          RoundedRectangleBorder(
+            borderRadius: BorderRadius.circular(30),
+          ),
+        ),
+        side: MaterialStateProperty.all(
+          BorderSide(color: CommonColors.blue),
+        ),
+      ),
+      onPressed: () => Get.back(),
+      child: CommonText(
+        title: buttonName,
+        color: CommonColors.blue,
+        fontSize: 15,
+        fontWight: FontWeight.bold,
+        topPadding: 13,
+        bottomPadding: 13,
+      ),
+    );
   }
 }
