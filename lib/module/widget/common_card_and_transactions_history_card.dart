@@ -64,7 +64,7 @@ class CommonCardAndTransitionHistoryCard extends StatelessWidget {
                   ),
                   CommonText(
                     title: CommonString.lastTransaction,
-                    color: CommonColors.green,
+                    color: CommonColors.darkGreen,
                     fontWight: FontWeight.bold,
                   ),
                 ],

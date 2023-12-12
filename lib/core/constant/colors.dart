@@ -4,19 +4,12 @@ class CommonColors {
   static Color transparent = Colors.transparent;
   static Color white = Colors.white;
 
-  static Color backGround = HexColor('#eff0f5');
-  static Color blue = HexColor('#5987f3');
-  static Color grey = HexColor('#162d68');
-  static Color liteGrey = HexColor('#64739f');
-  static Color green = HexColor('#218d6b');
-  static Color liteGreen = HexColor('#5ae2b3');
-}
-
-class HexColor extends Color {
-  static int _getColor(String hex) {
-    String formattedHex = "FF${hex.toUpperCase().replaceAll("#", "")}";
-    return int.parse(formattedHex, radix: 16);
-  }
-
-  HexColor(final String hex) : super(_getColor(hex));
+  static Color backGround = const Color(0xFFeff0f5);
+  static Color blue = const Color(0xFF5987f3);
+  static Color grey = const Color(0xFF162d68);
+  static Color liteGrey = const Color(0xFF64739f);
+  static Color green = const Color(0xFF42e1a8);
+  static Color darkGreen = const Color(0xFF218d6b);
+  static Color liteGreen = const Color(0xFF5ae2b3);
+  static Color red = const Color(0xFFf16056);
 }

@@ -4,6 +4,7 @@ import 'package:money_transfer_ui/core/constant/icons.dart';
 import 'package:money_transfer_ui/core/constant/string.dart';
 import 'package:money_transfer_ui/core/constant/users_details.dart';
 import 'package:money_transfer_ui/module/widget/common_card_and_transactions_history_card.dart';
+import 'package:money_transfer_ui/module/widget/common_payment_status_dialogbox.dart';
 import 'package:money_transfer_ui/module/widget/common_send_request_buttons.dart';
 import 'package:money_transfer_ui/module/widget/common_text.dart';
 import 'package:money_transfer_ui/module/widget/common_user_profile_image.dart';
@@ -56,18 +57,30 @@ class HomeScreen extends StatelessWidget {
                     inSaidPaddingTop: 20,
                     inSaidPaddingBottom: 20,
                   ),
-                  CommonSendRequestButton(
-                    icon: CommonIcon.downwardArrow,
-                    iconSize: 65,
-                    iconColor: CommonColors.blue,
-                    transactionType: CommonString.buttonRequestMoney,
-                    fontSize: 16,
-                    fontWeight: FontWeight.w600,
-                    fontColors: CommonColors.blue,
-                    inSaidPaddingLeft: 20,
-                    inSaidPaddingRight: 20,
-                    inSaidPaddingTop: 20,
-                    inSaidPaddingBottom: 20,
+                  GestureDetector(
+                    onTap: () => showDialog(
+                      context: context,
+                      builder: (context) => CommonPaymentStatusDialogBox(
+                        statusIcon: CommonIcon.paymentFail,
+                        message: CommonString.paymentRequestFail,
+                        mainButtonName: CommonString.buttonTryAgain,
+                        leftPadding: 15,
+                        rightPadding: 15,
+                      ),
+                    ),
+                    child: CommonSendRequestButton(
+                      icon: CommonIcon.downwardArrow,
+                      iconSize: 65,
+                      iconColor: CommonColors.blue,
+                      transactionType: CommonString.buttonRequestMoney,
+                      fontSize: 16,
+                      fontWeight: FontWeight.w600,
+                      fontColors: CommonColors.blue,
+                      inSaidPaddingLeft: 20,
+                      inSaidPaddingRight: 20,
+                      inSaidPaddingTop: 20,
+                      inSaidPaddingBottom: 20,
+                    ),
                   ),
                 ],
               ),
