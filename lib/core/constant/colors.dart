@@ -12,4 +12,5 @@ class CommonColors {
   static Color darkGreen = const Color(0xFF218d6b);
   static Color liteGreen = const Color(0xFF5ae2b3);
   static Color red = const Color(0xFFf16056);
+  static Color offWhite = const Color(0xFFd4d4d4);
 }

@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:money_transfer_ui/core/constant/colors.dart';
 import 'package:money_transfer_ui/core/constant/string.dart';
 import 'package:money_transfer_ui/module/widget/common_buttons.dart';
@@ -11,12 +10,14 @@ class CommonPaymentStatusDialogBox extends StatelessWidget {
     required this.statusIcon,
     required this.message,
     required this.mainButtonName,
+    required this.iconColors,
     this.leftPadding,
     this.rightPadding,
   });
   final Icon statusIcon;
   final String message;
   final String mainButtonName;
+  final Color iconColors;
   final double? leftPadding;
   final double? rightPadding;
   @override
@@ -24,10 +25,9 @@ class CommonPaymentStatusDialogBox extends StatelessWidget {
     return Column(
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
-        ScreenUtilInit(
+        Padding(
+          padding: const EdgeInsets.only(left: 25, right: 25),
           child: Container(
-            height: 0.4.sh,
-            width: 0.8.sw,
             decoration: BoxDecoration(
               borderRadius: const BorderRadius.all(
                 Radius.circular(40),
@@ -35,17 +35,19 @@ class CommonPaymentStatusDialogBox extends StatelessWidget {
               color: CommonColors.white,
             ),
             child: Padding(
-              padding: const EdgeInsets.all(10),
+              padding: const EdgeInsets.all(25),
               child: Column(
-                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: [
-                  Icon(
-                    statusIcon.icon,
-                    size: 150,
-                    color: CommonColors.red,
+                  Padding(
+                    padding: const EdgeInsets.all(8.0),
+                    child: Icon(
+                      statusIcon.icon,
+                      size: 150,
+                      color: iconColors,
+                    ),
                   ),
                   Padding(
-                    padding: EdgeInsets.only(bottom: 10.sp),
+                    padding: const EdgeInsets.only(bottom: 30),
                     child: Material(
                       color: CommonColors.white,
                       child: CommonText(

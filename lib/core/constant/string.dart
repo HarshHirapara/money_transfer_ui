@@ -18,4 +18,9 @@ class CommonString {
   static String paymentSuccessful = 'Payment successful!';
   static String buttonBack = 'Back to home';
   static String buttonTryAgain = 'Try again';
+  //send money menu
+  static String sendMoneyScreenTitle = 'Send Money';
+  static String sendToContact = 'Send to contact';
+  static String sendToPhoneNumber = 'Send to phone number';
+  static String sendToBankAccount = 'Send to bank account';
 }

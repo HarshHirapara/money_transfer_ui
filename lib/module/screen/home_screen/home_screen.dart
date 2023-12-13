@@ -1,9 +1,11 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:money_transfer_ui/core/constant/colors.dart';
 import 'package:money_transfer_ui/core/constant/icons.dart';
 import 'package:money_transfer_ui/core/constant/string.dart';
 import 'package:money_transfer_ui/core/constant/users_details.dart';
-import 'package:money_transfer_ui/module/widget/common_card_and_transactions_history_card.dart';
+import 'package:money_transfer_ui/module/screen/send_money_menu_screen/send_money_menu_screen.dart';
+import 'package:money_transfer_ui/module/widget/common_transactions_history.dart';
 import 'package:money_transfer_ui/module/widget/common_payment_status_dialogbox.dart';
 import 'package:money_transfer_ui/module/widget/common_send_request_buttons.dart';
 import 'package:money_transfer_ui/module/widget/common_text.dart';
@@ -44,18 +46,21 @@ class HomeScreen extends StatelessWidget {
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: [
-                  CommonSendRequestButton(
-                    icon: CommonIcon.upwardArrow,
-                    iconSize: 65,
-                    iconColor: CommonColors.blue,
-                    transactionType: CommonString.buttonSendMoney,
-                    fontSize: 16,
-                    fontWeight: FontWeight.w600,
-                    fontColors: CommonColors.blue,
-                    inSaidPaddingLeft: 30,
-                    inSaidPaddingRight: 30,
-                    inSaidPaddingTop: 20,
-                    inSaidPaddingBottom: 20,
+                  GestureDetector(
+                    onTap: () => Get.to(() => const SendMoneyMenu()),
+                    child: CommonSendRequestButton(
+                      icon: CommonIcon.upwardArrow,
+                      iconSize: 65,
+                      iconColor: CommonColors.blue,
+                      transactionType: CommonString.buttonSendMoney,
+                      fontSize: 16,
+                      fontWeight: FontWeight.w600,
+                      fontColors: CommonColors.blue,
+                      inSaidPaddingLeft: 30,
+                      inSaidPaddingRight: 30,
+                      inSaidPaddingTop: 20,
+                      inSaidPaddingBottom: 20,
+                    ),
                   ),
                   GestureDetector(
                     onTap: () => showDialog(
@@ -64,6 +69,7 @@ class HomeScreen extends StatelessWidget {
                         statusIcon: CommonIcon.paymentFail,
                         message: CommonString.paymentRequestFail,
                         mainButtonName: CommonString.buttonTryAgain,
+                        iconColors: CommonColors.red,
                         leftPadding: 15,
                         rightPadding: 15,
                       ),

@@ -12,4 +12,10 @@ class CommonIcon {
   //payment status
   static Icon paymentSuccess = const Icon(Icons.check);
   static Icon paymentFail = const Icon(Icons.close);
+  //send money menu
+  static Icon people = const Icon(Icons.people);
+  static Icon call = const Icon(Icons.call);
+  static Icon bank = const Icon(Icons.savings);
+  static Icon radioButtonOff = const Icon(Icons.radio_button_off_rounded);
+  static Icon radioButtonOn = const Icon(Icons.radio_button_on_rounded);
 }

@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:get/get_navigation/get_navigation.dart';
 import 'package:money_transfer_ui/module/widget/common_text.dart';
 import '../../core/constant/colors.dart';
 
