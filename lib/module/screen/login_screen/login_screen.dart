@@ -3,7 +3,7 @@ import 'package:money_transfer_ui/core/constant/colors.dart';
 import 'package:money_transfer_ui/core/constant/icons.dart';
 import 'package:money_transfer_ui/core/constant/images.dart';
 import 'package:money_transfer_ui/core/constant/string.dart';
-import 'package:money_transfer_ui/module/widget/common_keybord.dart';
+import 'package:money_transfer_ui/module/widget/common_keyboard.dart';
 import 'package:money_transfer_ui/module/widget/common_text.dart';
 
 class LoginScreen extends StatefulWidget {
