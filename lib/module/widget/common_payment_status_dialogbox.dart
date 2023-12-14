@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:money_transfer_ui/core/constant/colors.dart';
 import 'package:money_transfer_ui/core/constant/string.dart';
 import 'package:money_transfer_ui/module/widget/common_buttons.dart';
@@ -11,6 +12,7 @@ class CommonPaymentStatusDialogBox extends StatelessWidget {
     required this.message,
     required this.mainButtonName,
     required this.iconColors,
+    required this.backToHome,
     this.leftPadding,
     this.rightPadding,
   });
@@ -18,6 +20,7 @@ class CommonPaymentStatusDialogBox extends StatelessWidget {
   final String message;
   final String mainButtonName;
   final Color iconColors;
+  final void Function() backToHome;
   final double? leftPadding;
   final double? rightPadding;
   @override
@@ -61,11 +64,15 @@ class CommonPaymentStatusDialogBox extends StatelessWidget {
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                     children: [
-                      CommonOutlinedButton(buttonName: CommonString.buttonBack),
+                      CommonOutlinedButton(
+                        buttonName: CommonString.buttonBack,
+                        onPressed: backToHome,
+                      ),
                       CommonElevatedButton(
                         buttonName: mainButtonName,
                         leftPadding: leftPadding,
                         rightPadding: rightPadding,
+                        onPresses: () => Get.back(),
                       ),
                     ],
                   ),

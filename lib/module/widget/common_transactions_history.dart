@@ -5,6 +5,7 @@ import 'package:money_transfer_ui/module/widget/common_text.dart';
 import '../../core/constant/icons.dart';
 import '../../core/constant/string.dart';
 import '../../core/constant/users_details.dart';
+import 'common_transaction_details_card.dart';
 
 class CommonCardAndTransitionHistoryCard extends StatelessWidget {
   const CommonCardAndTransitionHistoryCard({
@@ -93,7 +94,11 @@ class CommonCardAndTransitionHistoryCard extends StatelessWidget {
 }
 
 class CommonCard extends StatelessWidget {
-  const CommonCard({super.key, required this.cardLogo, required this.cardType});
+  const CommonCard({
+    super.key,
+    required this.cardLogo,
+    required this.cardType,
+  });
   final Icon cardLogo;
   final String cardType;
 
@@ -124,36 +129,6 @@ class CommonCard extends StatelessWidget {
             ),
           ),
         ),
-      ),
-    );
-  }
-}
-
-class CommonTransactionDetails extends StatelessWidget {
-  const CommonTransactionDetails({
-    super.key,
-    required this.image,
-    required this.name,
-    required this.amount,
-  });
-  final String image;
-  final String name;
-  final String amount;
-  @override
-  Widget build(BuildContext context) {
-    return ListTile(
-      title: CommonText(
-        title: name,
-        fontWight: FontWeight.w500,
-        color: CommonColors.grey,
-      ),
-      leading: CircleAvatar(
-        backgroundImage: AssetImage(image),
-      ),
-      trailing: CommonText(
-        title: amount,
-        fontWight: FontWeight.w600,
-        color: CommonColors.grey,
       ),
     );
   }

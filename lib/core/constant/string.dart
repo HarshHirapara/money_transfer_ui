@@ -23,4 +23,10 @@ class CommonString {
   static String sendToContact = 'Send to contact';
   static String sendToPhoneNumber = 'Send to phone number';
   static String sendToBankAccount = 'Send to bank account';
+  //send money contacts
+  static String contacts = 'Contacts';
+  static String done = 'Done';
+  static String namePhoneNumber = 'Name phone number';
+  static String e = 'E';
+  static String f = 'F';
 }
