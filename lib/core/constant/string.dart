@@ -29,4 +29,9 @@ class CommonString {
   static String namePhoneNumber = 'Name phone number';
   static String e = 'E';
   static String f = 'F';
+  //send money to a contact
+  static String enterPhoneNumber = 'Enter phone number';
+  static String countryPhoneNumberCode = '+91';
+  static String proceed = 'Proceed';
+  static String enterPhoneNumberHint = '--- --- --- ---';
 }

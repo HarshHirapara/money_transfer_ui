@@ -58,7 +58,7 @@ class SendMoneyContactScreen extends StatelessWidget {
                     ),
                     Padding(
                       padding: const EdgeInsets.only(top: 20),
-                      child: CommonTextField(
+                      child: CommonTextFieldWithIcon(
                         hintText: CommonString.namePhoneNumber,
                         icon: CommonIcon.search,
                       ),
