@@ -1,3 +1,5 @@
+import 'dart:ffi';
+
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:money_transfer_ui/module/widget/common_text.dart';
@@ -9,10 +11,12 @@ class CommonElevatedButton extends StatelessWidget {
     required this.buttonName,
     this.leftPadding,
     this.rightPadding,
+    required this.onPresses,
   });
   final String buttonName;
   final double? leftPadding;
   final double? rightPadding;
+  final void Function()? onPresses;
 
   @override
   Widget build(BuildContext context) {
@@ -25,7 +29,7 @@ class CommonElevatedButton extends StatelessWidget {
           ),
         ),
       ),
-      onPressed: () => Get.back(),
+      onPressed: onPresses,
       child: CommonText(
         title: buttonName,
         fontSize: 15,
@@ -43,8 +47,10 @@ class CommonOutlinedButton extends StatelessWidget {
   const CommonOutlinedButton({
     super.key,
     required this.buttonName,
+    required this.onPressed,
   });
   final String buttonName;
+  final void Function() onPressed;
 
   @override
   Widget build(BuildContext context) {
@@ -59,7 +65,7 @@ class CommonOutlinedButton extends StatelessWidget {
           BorderSide(color: CommonColors.blue),
         ),
       ),
-      onPressed: () => Get.back(),
+      onPressed: onPressed,
       child: CommonText(
         title: buttonName,
         color: CommonColors.blue,

@@ -30,8 +30,8 @@ class HomeScreen extends StatelessWidget {
         ),
         actions: [
           CommonUserProfilePhoto(
-            imagePath: CommonUserDetails.user5,
-            radius: 22,
+            imagePath: CommonUserDetails.user3,
+            radius: 25,
             rightPadding: 25,
           )
         ],
@@ -70,6 +70,7 @@ class HomeScreen extends StatelessWidget {
                         message: CommonString.paymentRequestFail,
                         mainButtonName: CommonString.buttonTryAgain,
                         iconColors: CommonColors.red,
+                        backToHome: () => Get.back(),
                         leftPadding: 15,
                         rightPadding: 15,
                       ),

@@ -18,4 +18,8 @@ class CommonIcon {
   static Icon bank = const Icon(Icons.savings);
   static Icon radioButtonOff = const Icon(Icons.radio_button_off_rounded);
   static Icon radioButtonOn = const Icon(Icons.radio_button_on_rounded);
+  //send money to contact
+  static Icon search = const Icon(Icons.search);
+  static Icon box = const Icon(Icons.check_box_outline_blank_outlined);
+  static Icon checkBox = const Icon(Icons.check_box);
 }

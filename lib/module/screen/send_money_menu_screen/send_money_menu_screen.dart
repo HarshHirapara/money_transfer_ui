@@ -4,6 +4,7 @@ import 'package:money_transfer_ui/core/constant/colors.dart';
 import 'package:money_transfer_ui/core/constant/icons.dart';
 import 'package:money_transfer_ui/core/constant/string.dart';
 import 'package:money_transfer_ui/core/getx_property/getx_property.dart';
+import 'package:money_transfer_ui/module/screen/send_money_contect_screen.dart/send_money_contect_screen.dart';
 import 'package:money_transfer_ui/module/widget/common_payment_status_dialogbox.dart';
 import 'package:money_transfer_ui/module/widget/common_send_money_type_option.dart';
 import 'package:money_transfer_ui/module/widget/common_text.dart';
@@ -38,7 +39,7 @@ class SendMoneyMenu extends StatelessWidget {
                     GetXProperty.isContactSelected.value = true;
                     GetXProperty.isPhoneNumberSelected.value = false;
                     GetXProperty.isBankAccountSelected.value = false;
-                    // Get.to(()=>);
+                    Get.to(() => const SendMoneyContactScreen());
                   },
                   child: Padding(
                     padding: const EdgeInsets.only(bottom: 40),
@@ -61,6 +62,10 @@ class SendMoneyMenu extends StatelessWidget {
                         message: CommonString.paymentRequestFail,
                         mainButtonName: CommonString.buttonTryAgain,
                         iconColors: CommonColors.red,
+                        backToHome: () {
+                          Get.back();
+                          Get.back();
+                        },
                       ),
                     );
                   },
@@ -85,6 +90,10 @@ class SendMoneyMenu extends StatelessWidget {
                         message: CommonString.paymentRequestFail,
                         mainButtonName: CommonString.buttonTryAgain,
                         iconColors: CommonColors.red,
+                        backToHome: () {
+                          Get.back();
+                          Get.back();
+                        },
                       ),
                     );
                   },
