@@ -39,4 +39,9 @@ class CommonString {
   static String countryOfRecipientsBank = 'Country of recipients bank';
   static String dropdown = 'Dropdown';
   static String iban = 'IBAN';
+  //transaction details
+  static String paymentAmount = '\$200';
+  static String countryCurrency = 'USD';
+  static String request = 'Request';
+  static String pay = 'Pay';
 }

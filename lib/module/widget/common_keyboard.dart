@@ -1,11 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:get/route_manager.dart';
 import 'package:money_transfer_ui/core/constant/colors.dart';
+import 'package:money_transfer_ui/core/constant/string.dart';
 import 'package:money_transfer_ui/module/screen/home_screen/home_screen.dart';
+import 'package:money_transfer_ui/module/widget/common_buttons.dart';
 import 'package:money_transfer_ui/module/widget/common_text.dart';
 
-class KeyBoard extends StatelessWidget {
-  const KeyBoard({super.key});
+class CommonKeyBoard extends StatelessWidget {
+  const CommonKeyBoard({super.key, required this.payAndRequestButton});
+  final bool payAndRequestButton;
 
   @override
   Widget build(BuildContext context) {
@@ -30,10 +33,10 @@ class KeyBoard extends StatelessWidget {
             topLeft: Radius.circular(40), topRight: Radius.circular(40)),
         color: CommonColors.white,
       ),
-      height: screenHeight / 2.2,
+      height: payAndRequestButton ? screenHeight / 2 : screenHeight / 2.2,
       child: Padding(
         padding:
-            const EdgeInsets.only(top: 20, bottom: 35, left: 70, right: 70),
+            const EdgeInsets.only(top: 20, bottom: 35, left: 60, right: 60),
         child: Column(
           mainAxisAlignment: MainAxisAlignment.spaceAround,
           crossAxisAlignment: CrossAxisAlignment.center,
@@ -73,7 +76,27 @@ class KeyBoard extends StatelessWidget {
                   ),
                 ),
               ],
-            )
+            ),
+            payAndRequestButton
+                ? Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      Expanded(
+                        child: CommonOutlinedButton(
+                          buttonName: CommonString.request,
+                          onPressed: () {},
+                        ),
+                      ),
+                      const SizedBox(
+                        width: 15,
+                      ),
+                      Expanded(
+                        child: CommonElevatedButton(
+                            buttonName: CommonString.pay, onPresses: () {}),
+                      )
+                    ],
+                  )
+                : const SizedBox()
           ],
         ),
       ),

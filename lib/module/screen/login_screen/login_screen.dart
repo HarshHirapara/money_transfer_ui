@@ -55,7 +55,9 @@ class _LoginScreenState extends State<LoginScreen> {
                 ],
               ),
             ),
-            const KeyBoard()
+            const CommonKeyBoard(
+              payAndRequestButton: false,
+            )
           ],
         ),
       ),

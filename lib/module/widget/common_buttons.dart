@@ -1,7 +1,4 @@
-import 'dart:ffi';
-
 import 'package:flutter/material.dart';
-import 'package:get/get.dart';
 import 'package:money_transfer_ui/module/widget/common_text.dart';
 import '../../core/constant/colors.dart';
 

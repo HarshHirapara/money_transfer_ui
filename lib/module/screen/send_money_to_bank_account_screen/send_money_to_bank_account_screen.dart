@@ -7,6 +7,7 @@ import '../../../core/constant/string.dart';
 import '../../widget/common_buttons.dart';
 import '../../widget/common_text.dart';
 import '../../widget/common_text_field.dart';
+import '../transaction_detail_screen/transaction_detail.dart';
 
 class SendMoneyToBankAccount extends StatelessWidget {
   const SendMoneyToBankAccount({super.key});
@@ -108,7 +109,9 @@ class SendMoneyToBankAccount extends StatelessWidget {
                                   const EdgeInsets.only(top: 20, bottom: 20),
                               child: CommonElevatedButton(
                                 buttonName: CommonString.proceed,
-                                onPresses: () {},
+                                onPresses: () => Get.to(
+                                  () => const TransactionDetail(),
+                                ),
                               ),
                             ),
                           ),

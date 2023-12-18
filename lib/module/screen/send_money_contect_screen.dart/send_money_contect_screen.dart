@@ -10,6 +10,8 @@ import 'package:money_transfer_ui/module/widget/common_text.dart';
 import 'package:money_transfer_ui/module/widget/common_text_field.dart';
 import 'package:money_transfer_ui/module/widget/common_user_profile_image.dart';
 
+import '../transaction_detail_screen/transaction_detail.dart';
+
 class SendMoneyContactScreen extends StatelessWidget {
   const SendMoneyContactScreen({super.key});
 
@@ -50,7 +52,8 @@ class SendMoneyContactScreen extends StatelessWidget {
                             buttonName: CommonString.done,
                             leftPadding: 5,
                             rightPadding: 5,
-                            onPresses: () => Get.to(() => null),
+                            onPresses: () =>
+                                Get.to(() => const TransactionDetail()),
                           )
                         ],
                       ),
