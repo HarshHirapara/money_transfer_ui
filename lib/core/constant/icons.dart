@@ -24,4 +24,6 @@ class CommonIcon {
   static Icon checkBox = const Icon(Icons.check_box);
   //send money to bank account
   static Icon dropDown = const Icon(Icons.keyboard_arrow_down_outlined);
+  //payment review
+  static Icon edit = const Icon(Icons.edit);
 }

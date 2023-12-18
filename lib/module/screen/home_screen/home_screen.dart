@@ -71,6 +71,7 @@ class HomeScreen extends StatelessWidget {
                         mainButtonName: CommonString.buttonTryAgain,
                         iconColors: CommonColors.red,
                         backToHome: () => Get.back(),
+                        nextPage: () {},
                         leftPadding: 15,
                         rightPadding: 15,
                       ),

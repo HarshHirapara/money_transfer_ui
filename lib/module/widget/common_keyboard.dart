@@ -3,6 +3,7 @@ import 'package:get/route_manager.dart';
 import 'package:money_transfer_ui/core/constant/colors.dart';
 import 'package:money_transfer_ui/core/constant/string.dart';
 import 'package:money_transfer_ui/module/screen/home_screen/home_screen.dart';
+import 'package:money_transfer_ui/module/screen/payment_review_screen/payment_review_screen.dart';
 import 'package:money_transfer_ui/module/widget/common_buttons.dart';
 import 'package:money_transfer_ui/module/widget/common_text.dart';
 
@@ -77,26 +78,29 @@ class CommonKeyBoard extends StatelessWidget {
                 ),
               ],
             ),
-            payAndRequestButton
-                ? Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: [
-                      Expanded(
-                        child: CommonOutlinedButton(
-                          buttonName: CommonString.request,
-                          onPressed: () {},
-                        ),
+            if (payAndRequestButton)
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  Expanded(
+                    child: CommonOutlinedButton(
+                      buttonName: CommonString.request,
+                      onPressed: () {},
+                    ),
+                  ),
+                  const SizedBox(
+                    width: 15,
+                  ),
+                  Expanded(
+                    child: CommonElevatedButton(
+                      buttonName: CommonString.pay,
+                      onPresses: () => Get.to(
+                        () => const PaymentReview(),
                       ),
-                      const SizedBox(
-                        width: 15,
-                      ),
-                      Expanded(
-                        child: CommonElevatedButton(
-                            buttonName: CommonString.pay, onPresses: () {}),
-                      )
-                    ],
+                    ),
                   )
-                : const SizedBox()
+                ],
+              )
           ],
         ),
       ),

@@ -19,7 +19,7 @@ class CommonTextFieldWithIcon extends StatelessWidget {
         child: TextField(
           decoration: InputDecoration(
             hintText: hintText,
-            helperStyle: TextStyle(
+            hintStyle: TextStyle(
               color: CommonColors.grey,
               fontWeight: FontWeight.bold,
             ),
