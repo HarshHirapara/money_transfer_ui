@@ -13,6 +13,7 @@ class CommonPaymentStatusDialogBox extends StatelessWidget {
     required this.mainButtonName,
     required this.iconColors,
     required this.backToHome,
+    required this.nextPage,
     this.leftPadding,
     this.rightPadding,
   });
@@ -21,6 +22,7 @@ class CommonPaymentStatusDialogBox extends StatelessWidget {
   final String mainButtonName;
   final Color iconColors;
   final void Function() backToHome;
+  final void Function() nextPage;
   final double? leftPadding;
   final double? rightPadding;
   @override
@@ -72,7 +74,7 @@ class CommonPaymentStatusDialogBox extends StatelessWidget {
                         buttonName: mainButtonName,
                         leftPadding: leftPadding,
                         rightPadding: rightPadding,
-                        onPresses: () => Get.back(),
+                        onPresses: nextPage,
                       ),
                     ],
                   ),

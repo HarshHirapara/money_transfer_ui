@@ -44,4 +44,10 @@ class CommonString {
   static String countryCurrency = 'USD';
   static String request = 'Request';
   static String pay = 'Pay';
+  //payment review
+  static String amount = 'Amount';
+  static String to = 'To:';
+  static String forLunch = 'For lunch';
+  static String confirm = 'Confirm';
+  static String newPayment = 'New Payment';
 }

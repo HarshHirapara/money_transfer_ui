@@ -20,8 +20,9 @@ class CommonSendMoneyTypeOption extends StatelessWidget {
       decoration: BoxDecoration(
         color: CommonColors.white,
         border: Border.all(
-            width: 1.5,
-            color: isSelected ? CommonColors.darkGreen : CommonColors.offWhite),
+          width: 1.5,
+          color: isSelected ? CommonColors.darkGreen : CommonColors.offWhite,
+        ),
         borderRadius: const BorderRadius.all(
           Radius.circular(30),
         ),
