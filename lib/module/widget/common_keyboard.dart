@@ -37,7 +37,7 @@ class CommonKeyBoard extends StatelessWidget {
       height: payAndRequestButton ? screenHeight / 2 : screenHeight / 2.2,
       child: Padding(
         padding:
-            const EdgeInsets.only(top: 20, bottom: 35, left: 60, right: 60),
+            const EdgeInsets.only(top: 30, bottom: 35, left: 65, right: 65),
         child: Column(
           mainAxisAlignment: MainAxisAlignment.spaceAround,
           crossAxisAlignment: CrossAxisAlignment.center,

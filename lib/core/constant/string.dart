@@ -50,4 +50,12 @@ class CommonString {
   static String forLunch = 'For lunch';
   static String confirm = 'Confirm';
   static String newPayment = 'New Payment';
+  //my account preview
+  static String myAccount = 'My account';
+  static String currentBalance = 'Current balance';
+  static String percentageOfAddedAmount = '+2.7%';
+  static String myTotalBalance = '\$6790.98';
+  static String card = 'Cards';
+  static String myPageWorkCard = 'Work card/****7798';
+  static String myPageTravelCard = 'Travel card/****8900';
 }

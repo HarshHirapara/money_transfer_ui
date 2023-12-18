@@ -21,8 +21,8 @@ class HomeScreen extends StatelessWidget {
       appBar: AppBar(
         backgroundColor: CommonColors.transparent,
         elevation: 0,
-        automaticallyImplyLeading: false,
         centerTitle: false,
+        iconTheme: IconThemeData(color: CommonColors.blue),
         title: CommonText(
           title: CommonString.homePageAppBarTitle,
           color: CommonColors.grey,
@@ -71,7 +71,7 @@ class HomeScreen extends StatelessWidget {
                         mainButtonName: CommonString.buttonTryAgain,
                         iconColors: CommonColors.red,
                         backToHome: () => Get.back(),
-                        nextPage: () {},
+                        nextPage: () => Get.back(),
                         leftPadding: 15,
                         rightPadding: 15,
                       ),
@@ -96,7 +96,6 @@ class HomeScreen extends StatelessWidget {
             Expanded(
               child: CommonCardAndTransitionHistoryCard(
                 myCard: CommonString.myCard,
-                transaction: CommonString.transaction,
                 cardType1: CommonString.workCard,
                 cardType2: CommonString.travelCard,
               ),

@@ -15,9 +15,9 @@ class CommonUserDetails {
   static String name6 = 'Matt Ferry';
   //amount
   static String amount1 = '-\$1093';
-  static String amount2 = '-\$483';
+  static String amount2 = '+\$483';
   static String amount3 = '-\$472';
-  static String amount4 = '-\$387';
+  static String amount4 = '+\$387';
   static String amount5 = '-\$237';
   static String amount6 = '-\$343';
 //phone number

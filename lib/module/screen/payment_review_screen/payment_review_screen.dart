@@ -5,6 +5,8 @@ import 'package:money_transfer_ui/core/constant/colors.dart';
 import 'package:money_transfer_ui/core/constant/icons.dart';
 import 'package:money_transfer_ui/core/constant/string.dart';
 import 'package:money_transfer_ui/core/constant/users_details.dart';
+import 'package:money_transfer_ui/module/screen/home_screen/home_screen.dart';
+import 'package:money_transfer_ui/module/screen/my_account_preview_screen/my_account_prrview_screen.dart';
 import 'package:money_transfer_ui/module/widget/common_buttons.dart';
 import 'package:money_transfer_ui/module/widget/common_payment_status_dialogbox.dart';
 import 'package:money_transfer_ui/module/widget/common_text.dart';
@@ -18,6 +20,12 @@ class PaymentReview extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: CommonColors.backGround,
+      appBar: AppBar(
+        backgroundColor: CommonColors.transparent,
+        elevation: 0,
+        centerTitle: false,
+        iconTheme: IconThemeData(color: CommonColors.blue),
+      ),
       body: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
@@ -42,6 +50,7 @@ class PaymentReview extends StatelessWidget {
                   children: [
                     CommonText(
                       title: CommonString.amount,
+                      fontWight: FontWeight.w500,
                     ),
                     CommonText(
                       title: CommonString.paymentAmount,
@@ -109,8 +118,11 @@ class PaymentReview extends StatelessWidget {
                                   message: CommonString.paymentSuccessful,
                                   mainButtonName: CommonString.buttonNewPayment,
                                   iconColors: CommonColors.green,
-                                  backToHome: () {},
-                                  nextPage: () => Get.to(() => null),
+                                  backToHome: () {
+                                    Get.to(() => const HomeScreen());
+                                  },
+                                  nextPage: () =>
+                                      Get.to(() => const MyAccountPreview()),
                                 ),
                               ),
                             ),
