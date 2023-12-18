@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:money_transfer_ui/core/constant/colors.dart';
 import 'package:money_transfer_ui/core/constant/string.dart';
 import 'package:money_transfer_ui/module/widget/common_buttons.dart';
@@ -58,11 +57,15 @@ class SendMoneyToPhoneNumber extends StatelessWidget {
                           ],
                         ),
                       ),
-                      CommonElevatedButton(
-                        buttonName: CommonString.proceed,
-                        onPresses: () {},
-                        leftPadding: 85,
-                        rightPadding: 85,
+                      Row(
+                        children: [
+                          Expanded(
+                            child: CommonElevatedButton(
+                              buttonName: CommonString.proceed,
+                              onPresses: () {},
+                            ),
+                          ),
+                        ],
                       )
                     ],
                   ),

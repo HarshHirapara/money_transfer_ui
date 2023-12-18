@@ -13,4 +13,5 @@ class CommonColors {
   static Color liteGreen = const Color(0xFF5ae2b3);
   static Color red = const Color(0xFFf16056);
   static Color offWhite = const Color(0xFFd4d4d4);
+  static Color dropDownColor = const Color(0xFF706c6c);
 }

@@ -50,8 +50,7 @@ class SendMoneyContactScreen extends StatelessWidget {
                             buttonName: CommonString.done,
                             leftPadding: 5,
                             rightPadding: 5,
-                            onPresses: () =>
-                                Get.to(() => const SendMoneyToPhoneNumber()),
+                            onPresses: () => Get.to(() => null),
                           )
                         ],
                       ),
