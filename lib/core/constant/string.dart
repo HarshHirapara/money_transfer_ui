@@ -13,6 +13,7 @@ class CommonString {
   static String lastTransaction = 'Sort by recent';
   static String workCard = 'Work Card';
   static String travelCard = 'Travel Card';
+  static String proceed = 'Proceed';
   //payment status
   static String paymentRequestFail = 'Request failed!';
   static String paymentSuccessful = 'Payment successful!';
@@ -32,6 +33,10 @@ class CommonString {
   //send money to a contact
   static String enterPhoneNumber = 'Enter phone number';
   static String countryPhoneNumberCode = '+91';
-  static String proceed = 'Proceed';
   static String enterPhoneNumberHint = '--- --- --- ---';
+  //send money to bank account
+  static String enterBankAccountDetails = 'Enter bank account details';
+  static String countryOfRecipientsBank = 'Country of recipients bank';
+  static String dropdown = 'Dropdown';
+  static String iban = 'IBAN';
 }

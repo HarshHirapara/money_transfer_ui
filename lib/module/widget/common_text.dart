@@ -11,6 +11,7 @@ class CommonText extends StatelessWidget {
     this.bottomPadding,
     this.leftPadding,
     this.rightPadding,
+    this.textAlign,
   });
   final String title;
   final Color? color;
@@ -20,6 +21,7 @@ class CommonText extends StatelessWidget {
   final double? bottomPadding;
   final double? leftPadding;
   final double? rightPadding;
+  final TextAlign? textAlign;
 
   @override
   Widget build(BuildContext context) {
@@ -32,6 +34,7 @@ class CommonText extends StatelessWidget {
       ),
       child: Text(
         title,
+        textAlign: textAlign,
         style: TextStyle(
           color: color,
           fontSize: fontSize,

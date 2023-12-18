@@ -5,9 +5,12 @@ import 'package:money_transfer_ui/core/constant/icons.dart';
 import 'package:money_transfer_ui/core/constant/string.dart';
 import 'package:money_transfer_ui/core/getx_property/getx_property.dart';
 import 'package:money_transfer_ui/module/screen/send_money_contect_screen.dart/send_money_contect_screen.dart';
+import 'package:money_transfer_ui/module/screen/send_money_to_bank_account_screen/send_money_to_bank_account_screen.dart';
 import 'package:money_transfer_ui/module/widget/common_payment_status_dialogbox.dart';
 import 'package:money_transfer_ui/module/widget/common_send_money_type_option.dart';
 import 'package:money_transfer_ui/module/widget/common_text.dart';
+
+import '../send_money_to_phone_number_screen/send_money_to_phone_number.dart';
 
 class SendMoneyMenu extends StatelessWidget {
   const SendMoneyMenu({
@@ -25,14 +28,11 @@ class SendMoneyMenu extends StatelessWidget {
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                GestureDetector(
-                  onTap: () => Get.back(),
-                  child: CommonText(
-                    title: CommonString.sendMoneyScreenTitle,
-                    fontSize: 40,
-                    fontWight: FontWeight.bold,
-                    bottomPadding: 60,
-                  ),
+                CommonText(
+                  title: CommonString.sendMoneyScreenTitle,
+                  fontSize: 40,
+                  fontWight: FontWeight.bold,
+                  bottomPadding: 60,
                 ),
                 GestureDetector(
                   onTap: () {
@@ -55,19 +55,7 @@ class SendMoneyMenu extends StatelessWidget {
                     GetXProperty.isPhoneNumberSelected.value = true;
                     GetXProperty.isContactSelected.value = false;
                     GetXProperty.isBankAccountSelected.value = false;
-                    showDialog(
-                      context: context,
-                      builder: (context) => CommonPaymentStatusDialogBox(
-                        statusIcon: CommonIcon.paymentFail,
-                        message: CommonString.paymentRequestFail,
-                        mainButtonName: CommonString.buttonTryAgain,
-                        iconColors: CommonColors.red,
-                        backToHome: () {
-                          Get.back();
-                          Get.back();
-                        },
-                      ),
-                    );
+                    Get.to(() => const SendMoneyToPhoneNumber());
                   },
                   child: Padding(
                     padding: const EdgeInsets.only(bottom: 40),
@@ -83,19 +71,7 @@ class SendMoneyMenu extends StatelessWidget {
                     GetXProperty.isBankAccountSelected.value = true;
                     GetXProperty.isContactSelected.value = false;
                     GetXProperty.isPhoneNumberSelected.value = false;
-                    showDialog(
-                      context: context,
-                      builder: (context) => CommonPaymentStatusDialogBox(
-                        statusIcon: CommonIcon.paymentFail,
-                        message: CommonString.paymentRequestFail,
-                        mainButtonName: CommonString.buttonTryAgain,
-                        iconColors: CommonColors.red,
-                        backToHome: () {
-                          Get.back();
-                          Get.back();
-                        },
-                      ),
-                    );
+                    Get.to(() => const SendMoneyToBankAccount());
                   },
                   child: CommonSendMoneyTypeOption(
                     icon: CommonIcon.bank,
