@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 class CommonIcon {
   //login screen
   static Icon outLineCircle = const Icon(Icons.circle_outlined);
-  static Icon keyBoardKey = const Icon(Icons.navigate_before);
+  static Icon keyBoardKey = const Icon(Icons.navigate_before_rounded);
   //home screen
   static Icon upwardArrow = const Icon(Icons.arrow_upward_rounded);
   static Icon downwardArrow = const Icon(Icons.arrow_downward_rounded);
@@ -25,5 +25,6 @@ class CommonIcon {
   //send money to bank account
   static Icon dropDown = const Icon(Icons.keyboard_arrow_down_outlined);
   //payment review
-  static Icon edit = const Icon(Icons.edit);
+  static const edit = Icon(Icons.edit);
+  static const openCard = Icon(Icons.navigate_next_rounded);
 }

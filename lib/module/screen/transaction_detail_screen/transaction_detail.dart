@@ -13,6 +13,12 @@ class TransactionDetail extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: CommonColors.backGround,
+      appBar: AppBar(
+        backgroundColor: CommonColors.transparent,
+        elevation: 0,
+        centerTitle: false,
+        iconTheme: IconThemeData(color: CommonColors.blue),
+      ),
       body: Column(
         mainAxisAlignment: MainAxisAlignment.end,
         children: [

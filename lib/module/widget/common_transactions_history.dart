@@ -11,15 +11,17 @@ class CommonCardAndTransitionHistoryCard extends StatelessWidget {
   const CommonCardAndTransitionHistoryCard({
     super.key,
     required this.myCard,
-    required this.transaction,
     required this.cardType1,
     required this.cardType2,
+    this.openCardIcon1,
+    this.openCardIcon2,
   });
   final String myCard;
-  final String transaction;
+
   final String cardType1;
   final String cardType2;
-
+  final Icon? openCardIcon1;
+  final Icon? openCardIcon2;
   @override
   Widget build(BuildContext context) {
     double screenHeight = MediaQuery.of(context).size.height;
@@ -47,10 +49,12 @@ class CommonCardAndTransitionHistoryCard extends StatelessWidget {
             CommonCard(
               cardLogo: CommonIcon.workCard,
               cardType: cardType1,
+              openCard: openCardIcon1,
             ),
             CommonCard(
               cardLogo: CommonIcon.travelCard,
               cardType: cardType2,
+              openCard: openCardIcon2,
             ),
             Padding(
               padding: const EdgeInsets.only(top: 9, bottom: 5),
@@ -58,7 +62,7 @@ class CommonCardAndTransitionHistoryCard extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
                   CommonText(
-                    title: transaction,
+                    title: CommonString.transaction,
                     fontSize: 17,
                     color: CommonColors.grey,
                     fontWight: FontWeight.bold,
@@ -98,9 +102,11 @@ class CommonCard extends StatelessWidget {
     super.key,
     required this.cardLogo,
     required this.cardType,
+    this.openCard,
   });
   final Icon cardLogo;
   final String cardType;
+  final Icon? openCard;
 
   @override
   Widget build(BuildContext context) {
@@ -127,6 +133,7 @@ class CommonCard extends StatelessWidget {
                 color: CommonColors.grey,
               ),
             ),
+            trailing: openCard,
           ),
         ),
       ),
