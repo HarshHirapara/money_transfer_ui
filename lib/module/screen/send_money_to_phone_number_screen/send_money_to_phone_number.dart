@@ -1,9 +1,11 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:money_transfer_ui/core/constant/colors.dart';
 import 'package:money_transfer_ui/core/constant/string.dart';
 import 'package:money_transfer_ui/module/widget/common_buttons.dart';
 import 'package:money_transfer_ui/module/widget/common_text.dart';
 import 'package:money_transfer_ui/module/widget/common_text_field.dart';
+import '../transaction_detail_screen/transaction_detail.dart';
 
 class SendMoneyToPhoneNumber extends StatelessWidget {
   const SendMoneyToPhoneNumber({super.key});
@@ -62,7 +64,8 @@ class SendMoneyToPhoneNumber extends StatelessWidget {
                           Expanded(
                             child: CommonElevatedButton(
                               buttonName: CommonString.proceed,
-                              onPresses: () {},
+                              onPresses: () =>
+                                  Get.to(() => const TransactionDetail()),
                             ),
                           ),
                         ],
